@@ -33,7 +33,7 @@ basic.forever(function () {
     Alien = game.createSprite(randint(0, 4), 0)
     Alien_laser = game.createSprite(Alien.get(LedSpriteProperty.X), Alien.get(LedSpriteProperty.Y))
     Alien.change(LedSpriteProperty.Brightness, 50)
-    music.play(music.createSoundExpression(WaveShape.Noise, 500, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+    music.play(music.createSoundExpression(WaveShape.Noise, 500, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.InBackground)
     for (let index = 0; index < 4; index++) {
         basic.pause(500)
         Alien_laser.change(LedSpriteProperty.Y, 1)

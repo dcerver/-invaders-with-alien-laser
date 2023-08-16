@@ -1,5 +1,5 @@
 {
-    "name": " Invaders with Alien laser",
+    "name": "Space Invaders with Alien laser",
     "description": "",
     "dependencies": {
         "core": "*",

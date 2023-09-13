@@ -1,6 +1,9 @@
 input.onButtonPressed(Button.A, function () {
     Ship.change(LedSpriteProperty.X, -1)
 })
+input.onPinPressed(TouchPin.P2, function () {
+	
+})
 input.onButtonPressed(Button.AB, function () {
     Laser = game.createSprite(Ship.get(LedSpriteProperty.X), 4)
     music.play(music.createSoundExpression(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.InBackground)
@@ -29,6 +32,7 @@ let Ship: game.LedSprite = null
 Ship = game.createSprite(2, 4)
 game.startCountdown(60000)
 game.setScore(0)
+pins.touchSetMode(TouchTarget.P2, TouchTargetMode.Capacitive)
 basic.forever(function () {
     Alien = game.createSprite(randint(0, 4), 0)
     Alien_laser = game.createSprite(Alien.get(LedSpriteProperty.X), Alien.get(LedSpriteProperty.Y))
@@ -44,4 +48,7 @@ basic.forever(function () {
     }
     Alien_laser.delete()
     Alien.delete()
+})
+basic.forever(function () {
+	
 })
